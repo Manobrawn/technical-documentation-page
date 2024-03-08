@@ -1,9 +1,25 @@
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set margin and padding for body */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Media query to hide navbar on smaller screens */
 @media only screen and (max-width: 1200px) {
     #navbar {
-      display: none;
+        display: none;
     }
-  }
+}
 
+/* Media query to adjust margins on smaller screens */
 @media only screen and (max-width: 1200px) {
     body {
         margin-left: 10px;
@@ -36,11 +52,6 @@ h2 {
     text-align: center;
 }
 
-body {
-    margin-left: 0;
-    margin-right: 0;
-}
-
 main header {
     display: flex;
     justify-content: left;
@@ -61,15 +72,16 @@ section {
 
 #navbar {
     position: fixed; 
-    top: 50%; 
+    top: 0; 
     left: 0; 
-    transform: translateY(-50%); /* Vertically center the navbar */
+    height: 100vh; /* Make navbar full height */
     display: flex;
     flex-direction: column; 
     align-items: center; 
     background-color: rgba(129, 48, 39, 10%);
 }
-.nav-link img{
+
+.nav-link img {
     width: 40px;
     height: 40px;
     margin: 5px 0;
@@ -84,13 +96,6 @@ section {
     background-color: lightgrey;
 }
 
-code {
-    background-color: rgba(129, 48, 39, 10%);
-    font-size: 16px;
-    line-height: 3.0;
-    padding: 15px 0;
-}
- 
 .links-container {
     display: flex;
     justify-content: space-between;
@@ -101,7 +106,6 @@ code {
     display: inline-block;
     padding-left: 10px;
 }
-
 
 article {
     text-indent: 1.5em;
