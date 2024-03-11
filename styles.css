@@ -1,42 +1,20 @@
-/* Reset margin and padding for all elements */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Set margin and padding for body */
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-/* Media query to hide navbar on smaller screens */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 760px) {
     #navbar {
-        display: none;
+      display: none;
     }
-}
-
-/* Media query to adjust margins on smaller screens */
-@media only screen and (max-width: 1200px) {
-    body {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-}
+  }
 
 html {
     background-color: rgb(231, 231, 231);
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
+    font-size: 100%;
 }
 
 h1 {
     text-align: center;
     font-family: 'Roboto', sans-serif; 
-    font-size: 36px; 
+    font-size: 2rem; 
     border: 2px solid rgba(129, 48, 39, 10%); 
     padding: 10px 20px; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
@@ -50,6 +28,11 @@ h2 {
     padding-right: 30px;
     font-size: 24px;
     text-align: center;
+}
+
+body {
+    margin-left: 45px;
+    margin-right: 30px;
 }
 
 main header {
@@ -72,17 +55,16 @@ section {
 
 #navbar {
     position: fixed; 
-    top: 0; 
+    top: 50%; 
     left: 0; 
-    height: 100vh; /* Make navbar full height */
+    transform: translateY(-50%); 
     display: flex;
     flex-direction: column; 
     align-items: center; 
     background-color: rgba(129, 48, 39, 10%);
     z-index: -1;
 }
-
-.nav-link img {
+.nav-link img{
     width: 40px;
     height: 40px;
     margin: 5px 0;
@@ -97,6 +79,13 @@ section {
     background-color: lightgrey;
 }
 
+code {
+    background-color: rgba(129, 48, 39, 10%);
+    font-size: 16px;
+    line-height: 3.0;
+    padding: 15px 0;
+}
+ 
 .links-container {
     display: flex;
     justify-content: space-between;
@@ -108,10 +97,10 @@ section {
     padding-left: 10px;
 }
 
+
 article {
     text-indent: 1.5em;
     text-align: justify;
-    margin-left: 50px; /* Adjust this value based on the width of your navbar */
 }
 
 footer {
